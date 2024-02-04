@@ -34,7 +34,7 @@
 
 	<!-- logger추가해봄-->
 	<logger name="jdbc.audit">
-		<level value="info" />
+		<level value="warn" />
 	</logger>
 	
 	<logger name="jdbc.resultset">
