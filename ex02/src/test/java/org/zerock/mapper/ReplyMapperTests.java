@@ -46,4 +46,36 @@ public class ReplyMapperTests {
 	//		mapper.insert(vo);
 	//	});
 	
+	//@Test
+	//public void testRead() {
+		
+	//	Long targetNo = 7982L;
+		
+	//	ReplyVO vo = mapper.read(targetNo);
+		
+	//	log.info(vo);
+		
+	//}
+	
+	//@Test
+	//public void testDelete() {
+		
+	//	Long targetNo = 7982L;
+		
+	//	log.info(mapper.delete(targetNo)); // INFO : org.zerock.mapper.ReplyMapperTests - 1
+	//}
+	
+	@Test
+	public void testUpdate() {
+		
+		long targetNo = 7981L;
+		
+		ReplyVO vo = mapper.read(targetNo);
+		
+		vo.setReply("Update Reply");
+		
+		int count = mapper.update(vo);
+		
+		log.info("UPDATE COUNT : " + count); // org.zerock.mapper.ReplyMapperTests - UPDATE COUNT : 1
+	}
 }
