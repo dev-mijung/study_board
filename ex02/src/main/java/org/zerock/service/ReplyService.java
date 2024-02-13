@@ -8,15 +8,15 @@ import org.zerock.domain.ReplyVO;
 
 public interface ReplyService {
 	
-	public int insert(ReplyVO vo);
+	public int register(ReplyVO vo);
 	
 	public ReplyVO read(long rno);
 	
-	public int delete (long rno);
+	public int remove (long rno);
 	
-	public int update(ReplyVO vo);
+	public int modify (ReplyVO vo);
 	
-	public List<ReplyVO> getListWithPaging(
+	public List<ReplyVO> getList(
 			@Param("cri") Criteria cri,
 			@Param("bno") Long bno);
 }
